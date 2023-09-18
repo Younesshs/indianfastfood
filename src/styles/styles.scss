@@ -1,0 +1,19 @@
+:root {
+    --color-light-brown: #ccb29b;
+    --color-brown: #a08b78;
+    --color-white: #fff;
+    --color-light-grey: #d4d4d4;
+    --color-grey: #8f8e8e;
+    --color-light-orange: #fad699;
+    --color-orange: #f8b94d;
+}
+
+@import '_themes/indianfastfood-theme.scss';
+
+html, body { width: 100%; height: 100%; }
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue",
+    sans-serif;
+}

@@ -1,0 +1,84 @@
+.app-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+    display: table;
+}
+
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+}
+
+.example-color-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.color-card {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+#ccb29b {
+    background-color: var(--color-light-brown);    
+}
+
+#Five45454 {
+    background-color: var(--color-brown);
+}
+
+#fff {
+    background-color: var(--color-white);
+}
+
+#d4d4d4 {
+    background-color: var(--color-light-grey);
+}
+
+#Eightf8e8e {
+    background-color: var(--color-grey);
+}
+
+#fad699 {
+    background-color: var(--color-light-orange)
+}
+
+#f8b94d {
+    background-color: var(--color-orange);
+}
+
+
+.example-button-row {
+    display: table-cell;
+    max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+}

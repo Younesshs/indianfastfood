@@ -1,0 +1,17 @@
+@use '@angular/material' as mat;
+@import '../../libs/core/theming/palette1.scss';
+
+@include mat.core();
+
+$my-primary: mat.define-palette($md-primary, 300);
+$my-accent: mat.define-palette($md-accent, 200);
+$my-warn: mat.define-palette($md-warn, 500);
+
+$my-theme: mat.define-light-theme((color: (primary: $my-primary,
+                accent: $my-accent, warn: $my-warn
+            ),
+            typography: mat.define-typography-config(),
+            density: 0,
+        ));
+
+@include mat.all-component-themes($my-theme);
