@@ -8,6 +8,8 @@ Après avoir fait le git clone `https://github.com/Younesshs/indianfastfood.git`
 
 CD indianfastfood
 
+npm i
+
 npm start
 
 Grâce à la dépendance npm-run-all on peux lancer angular et expressjs en meme temps avec une seul commande
