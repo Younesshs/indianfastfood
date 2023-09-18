@@ -1,11 +1,28 @@
-const express = require('express');
+const express = require("express");
+const session = require("express-session");
+const bodyparser = require("body-parser");
+const cors = require("cors");
+const exampleRoutes = require("./_routes/exampleRoutes");
+const serverInfo = require('./_config/config.js');
+
 const app = express();
-const port = 3000;
 
-app.get('/api/hello', (req, res) => {
-    res.send('Hello, World!');
-});
+app.use(cors());
+app.use(bodyparser.json());
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+app.use(session({
+    secret: "mettre-un-code-secret", // TODO: !!
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+}));
+
+app.use('/example', exampleRoutes);
+
+app.listen(serverInfo.port.server, () => {
+    console.log();
+    console.info(
+        "[SERVER] Server started on port " + serverInfo.port.server + " ..."
+    );
+    console.log();
 });
