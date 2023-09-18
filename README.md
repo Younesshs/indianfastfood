@@ -5,7 +5,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Installation de l'application
 
 Après avoir fait le git clone `https://github.com/Younesshs/indianfastfood.git`
+
 CD indianfastfood
+
 npm start
 
 Grâce à la dépendance npm-run-all on peux lancer angular et expressjs en meme temps avec une seul commande
