@@ -2,9 +2,25 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
 
-## Development server
+## Installation de l'application
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Après avoir fait le git clone `https://github.com/Younesshs/indianfastfood.git`
+CD indianfastfood
+npm start
+
+Grâce à la dépendance npm-run-all on peux lancer angular et expressjs en meme temps avec une seul commande
+
+"start": "npm-run-all --parallel start:ng start:server",
+"start:ng": "ng serve",
+"start:server": "cd _expressjs && node index.js"
+
+## Serveur de développement
+
+Lancez `ng serve` pour un serveur de développement. Naviguez jusqu'à `http://localhost:4200/`. 
+L'application sera automatiquement rechargée si vous modifiez l'un des fichiers sources.
+
+Lancez `nodemon` pour un serveur nodejs backend. Naviguez jusqu'à `http://localhost:3000/`. 
+L'application sera automatiquement rechargée si vous modifiez l'un des fichiers sources.
 
 ## Code scaffolding
 
