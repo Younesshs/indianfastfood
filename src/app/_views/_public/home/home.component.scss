@@ -10,6 +10,10 @@
 .home {
     display: flexbox;
     display: flex;
+    justify-content: space-around;
     flex-direction: row;
     flex-direction: row;
+}
+.home_all {
+    text-align: center;
 }
