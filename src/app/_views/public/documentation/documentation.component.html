@@ -1,0 +1,103 @@
+<div class="documentation-container">
+    <h2>Documentation sur l'application</h2>
+    <section>
+        <h2>Élements de styles</h2>
+        <div>
+            <p>Utiliser les couleurs dans les composants MATERIALS avec l'attirbue color:'accent' <br>
+                et pour les autres elements HTML etc ... vous pourrez utiliser dans vos fichiers css
+                var(--color-lacouleur) voir dans le fichier styles.scss</p>
+            <div class="example-label">ROOT Color</div>
+            <div class="example-color-row">
+                <div class="color-card" id="ccb29b">#ccb29b</div>
+                <div class="color-card" id="Five45454">#545454</div>
+                <div class="color-card" id="fff">#fff</div>
+                <div class="color-card" id="d4d4d4">#d4d4d4</div>
+                <div class="color-card" id="Eightf8e8e">#8f8e8e</div>
+                <div class="color-card" id="fad699">#fad699</div>
+                <div class="color-card" id="f8b94d">#f8b94d</div>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div class="example-label">Raised Button</div>
+            <div class="example-button-row">
+                <button mat-raised-button>Basic</button>
+                <button mat-raised-button color="primary">Primary</button>
+                <button mat-raised-button color="accent">Accent</button>
+                <button mat-raised-button color="warn">Warn</button>
+                <button mat-raised-button disabled>Disabled</button>
+                <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+            </div>
+        </div>
+    </section>
+    <section class="routing">
+        <h2>Routing</h2>
+        <h3>Naviger dans l'application</h3>
+        <div class="navigation">
+            <button mat-raised-button color="primary" routerLink="/public">Public</button>
+            <button mat-raised-button color="primary" routerLink="/auth">Auth</button>
+            <button mat-raised-button color="primary" routerLink="/order">Order</button>
+            <button mat-raised-button color="primary" routerLink="/restaurant">Restaurant</button>
+            <button mat-raised-button color="primary" routerLink="/customer">Customer</button>
+            <button mat-raised-button color="primary" routerLink="/administrator">Administrator</button>
+        </div>
+        <div>
+            <p><small>Composants du module Public :</small></p>
+            <button mat-raised-button color="primary" routerLink="/public/menu">Public -> menu</button>
+            <button mat-raised-button color="primary" routerLink="/public/cart">Public -> cart</button>
+            <button mat-raised-button color="primary" routerLink="/public/documentation">Public -> documentation</button>
+        </div>
+        <hr>
+        <br>
+        <p>
+            Route par défaut ('') :
+            Lorsque l'utilisateur accède à la racine de l'application (par exemple , http://localhost:4200/), il est
+            redirigé vers le chemin 'public/'. <br><br>
+
+            Route 'public' :
+            Lorsque l'utilisateur accède à 'public', le module PublicModule est chargé de manière asynchrone. Cela
+            signifie que les ressources nécessaires pour cette partie de l'application sont chargées uniquement lorsque
+            l'utilisateur accède à cette route. <br><br>
+
+            Route 'auth' :
+            De même, lorsque l'utilisateur accède à 'auth', le module AuthModule est chargé de manière asynchrone.
+            <br><br>
+
+            Route 'order' :
+            Lorsque l'utilisateur accède à 'order', le module OrderModule est chargé de manière asynchrone. <br><br>
+
+            Route 'restaurant' :
+            Lorsque l'utilisateur accède à 'restaurant', le module RestaurantModule est chargé de manière asynchrone.
+            De plus, la route est protégée par un garde (guard) appelé RestaurantAuthGuard, ce qui signifie que l'accès
+            à cette route est limité aux utilisateurs qui satisfont les conditions définies dans ce garde. <br><br>
+
+            Route 'customer' :
+            Lorsque l'utilisateur accède à 'customer', le module CustomerModule est chargé de manière asynchrone.
+            De plus, la route est protégée par un garde appelé CustomerAuthGuard, limitant l'accès aux utilisateurs
+            autorisés. <br><br>
+
+            Route 'administrator' :
+            Lorsque l'utilisateur accède à 'administrator', le module AdministratorModule est chargé de manière
+            asynchrone.
+            La route est protégée par un garde appelé AdministratorAuthGuard, limitant l'accès aux utilisateurs
+            autorisés. <br><br>
+
+            Route '**' (toutes les autres routes inconnues) :
+            Si l'utilisateur tente d'accéder à une route inconnue, il est redirigé vers 'public/e404'. Cela peut être
+            une page d'erreur 404, par exemple, indiquant que la page demandée n'existe pas. <br>
+        </p>
+    </section>
+    <section>
+        <!-- COMPOSANTS LOADER -->
+        <h2>Loader</h2>
+    </section>
+    <section>
+        <!-- COMPOSANTS TOAST -->
+        <h2>Toast</h2>
+    </section>
+    <section>
+        <!-- COMPOSANTS RESPONSIVES -->
+        <h2>Format d'écran</h2>
+        <p>Vous êtes sur "{{device}}"</p>
+    </section>
+</div>
