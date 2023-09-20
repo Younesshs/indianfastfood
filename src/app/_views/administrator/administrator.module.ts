@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AdministratorRoutingModule } from './administrator-routing.module';
 import { AlayoutComponent } from './alayout/alayout.component';
 
+import { MaterialsModule } from 'src/app/_shared/materials/materials.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { AlayoutComponent } from './alayout/alayout.component';
   ],
   imports: [
     CommonModule,
-    AdministratorRoutingModule
+    AdministratorRoutingModule,
+    MaterialsModule
   ]
 })
 export class AdministratorModule { }

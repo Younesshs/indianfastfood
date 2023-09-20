@@ -7,7 +7,7 @@ import { CartComponent } from './cart/cart.component';
 import { PlayoutComponent } from './playout/playout.component';
 import { DocumentationComponent } from './documentation/documentation.component';
 
-import { MatButtonModule } from '@angular/material/button';
+import { MaterialsModule } from 'src/app/_shared/materials/materials.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     PublicRoutingModule,
-    MatButtonModule
+    MaterialsModule
   ]
 })
 export class PublicModule { }

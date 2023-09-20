@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RestaurantRoutingModule } from './restaurant-routing.module';
 import { RlayoutComponent } from './rlayout/rlayout.component';
 
+import { MaterialsModule } from 'src/app/_shared/materials/materials.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { RlayoutComponent } from './rlayout/rlayout.component';
   ],
   imports: [
     CommonModule,
-    RestaurantRoutingModule
+    RestaurantRoutingModule,
+    MaterialsModule
   ]
 })
 export class RestaurantModule { }

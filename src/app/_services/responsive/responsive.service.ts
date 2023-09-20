@@ -24,7 +24,7 @@ export class ResponsiveService {
   //TODO: FAIRE LES TESTS POUR LES FORMATS D'ECRAN REMPLACER LES '00' par les valeurs
 
   isMobile(): boolean {
-    return this.screenWidth >= 390 && this.screenHeight <= 844;
+    return this.screenWidth >= 390 && this.screenHeight <= 840;
   }
 
   isTablet(): boolean {

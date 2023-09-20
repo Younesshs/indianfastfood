@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CustomerRoutingModule } from './customer-routing.module';
 import { ClayoutComponent } from './clayout/clayout.component';
 
+import { MaterialsModule } from 'src/app/_shared/materials/materials.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { ClayoutComponent } from './clayout/clayout.component';
   ],
   imports: [
     CommonModule,
-    CustomerRoutingModule
+    CustomerRoutingModule,
+    MaterialsModule
   ]
 })
 export class CustomerModule { }

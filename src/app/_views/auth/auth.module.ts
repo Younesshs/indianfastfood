@@ -6,8 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { AlayoutComponent } from './alayout/alayout.component';
 import { RegisterComponent } from './register/register.component';
 
-import { MatButtonModule } from '@angular/material/button';
-
+import { MaterialsModule } from 'src/app/_shared/materials/materials.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    MatButtonModule
+    MaterialsModule,
   ]
 })
 export class AuthModule { }
