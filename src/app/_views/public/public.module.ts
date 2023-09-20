@@ -7,6 +7,7 @@ import { CartComponent } from './cart/cart.component';
 import { PlayoutComponent } from './playout/playout.component';
 import { DocumentationComponent } from './documentation/documentation.component';
 
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DocumentationComponent } from './documentation/documentation.component'
   ],
   imports: [
     CommonModule,
-    PublicRoutingModule
+    PublicRoutingModule,
+    MatButtonModule
   ]
 })
 export class PublicModule { }
