@@ -18,6 +18,7 @@ import { MaterialsModule } from 'src/app/_shared/materials/materials.module';
     CommonModule,
     AuthRoutingModule,
     MaterialsModule,
+    
   ]
 })
 export class AuthModule { }
