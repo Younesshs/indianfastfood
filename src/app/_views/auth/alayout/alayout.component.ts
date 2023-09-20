@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./alayout.component.scss']
 })
 export class AlayoutComponent {
-
 }
