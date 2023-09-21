@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: db_IndianRestaurant
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: indianRestaurant
+      MYSQL_USER: indianRestaurantApp
+      MYSQL_PASSWORD: indianRestaurantPassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - ../volumes/dbData:/var/lib/mysql
+      - ./mysql-scripts:/docker-entrypoint-initdb.d 
+      
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: db_IndianRestaurant_phpmyadmin
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - "8081:80"
