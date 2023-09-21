@@ -1,11 +1,13 @@
-<div class="toast-container slide-in" [ngStyle]="{'background-color': bgColor, 'color': color}"
+<div class="toast-container slide-in" [ngStyle]="{'background-color': toast.bgColor, 'color': toast.color}"
     [ngClass]="{'toast-container-large-size': isLargeSize}">
     <div class="progress-bar">
         <mat-progress-bar color="accent" mode="query"></mat-progress-bar>
     </div>
-    <div class="toast-content">
-        <p class="message">{{message}} <span *ngIf="checkMessageSize(message)"><mat-icon
-                    class="settings-ethernet hover-opacity"
-                    (click)="editSizeOfToasts()">settings_ethernet</mat-icon></span></p>
+    <div [ngClass]="{'toast-content': !isLargeSize, 'toast-content-large-size': isLargeSize}">
+        <p [ngClass]="{'message': !isLargeSize, 'message-large-size': isLargeSize}">{{toast.message}} <span
+                *ngIf="checkMessageSize(toast.message)"></span></p>
+        <mat-icon class="hover-opacity"
+            [ngClass]="{'size-icon': !isLargeSize, 'size-icon-large-size': isLargeSize}"
+            (click)="editSizeOfToasts()">{{isLargeSize ? "remove" : "settings_ethernet"}}</mat-icon>
     </div>
 </div>

@@ -47,8 +47,15 @@
                 <p class="fade-in">Texte apparaissant progressivement</p>|
                 <div class="slide-in">Contenu qui glisse</div>
             </div>
+            <hr>
+            <h3>Animations au survol</h3>
+            <div>
+                <p>Vous pouvez ajouter un effect d'opacity au survol avec la class "hover-opacity" dans vos élements HTML</p><br>
+                <p>Survol moi</p>
+                <mat-icon class="hover-opacity">visibility</mat-icon>
+            </div>
             <br>
-            <p>Pour appliquer l'animation appliquer la class sur l'élément HTML</p>           
+            <p>Pour appliquer l'animation appliquer la class sur l'élément HTML</p>
         </div>
     </section>
     <section class="routing">
@@ -116,14 +123,32 @@
             une page d'erreur 404, par exemple, indiquant que la page demandée n'existe pas. <br>
         </p>
     </section>
+    <section class="toasts">
+        <h2>Toast</h2>
+        <p>Un service et un composant on était ajouté au projet pour facilité l'affichage de message dynamique</p>
+        <div class="toast-example">
+            <button mat-raised-button color="primary" (click)="openToastExampleOne()">Ouvrir un toast
+                (example < 30)</button>
+                    <button mat-raised-button color="primary" (click)="openToastExampleTwo()">Ouvrir un toast (example
+                        >= 30)</button>
+        </div>
+        <hr>
+        <div>
+            <h4>Ajouter un toast</h4>
+            <p>Se rendre dans le .ts du composant (ou doit etre afficher le toast)</p><br>
+            <p>Crée la variable toast</p>
+            <p>{{toasts | json}}</p><br>
+            <p>Importer le service</p><br>
+            <p>Crée la fonction permettant d'ouvrir le toast (par ex: openToastExampleOne(toasts.exampleOne)) et entrée en parametre l'object que vous avez crée avant</p>
+            <p>Vous pourrez maintenant ajout a vos elements (click)="openToastExampleOne(toasts.exampleOne)"</p>
+        </div>
+        <p><small>Le toast se ferme 5 secondes après sont ouverture</small></p>
+    </section>
     <section>
         <!-- COMPOSANTS LOADER -->
         <h2>Loader</h2>
     </section>
-    <section>
-        <!-- COMPOSANTS TOAST -->
-        <h2>Toast</h2>
-    </section>
+
     <section>
         <!-- COMPOSANTS RESPONSIVES -->
         <h2>Format d'écran</h2>

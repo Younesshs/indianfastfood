@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastsService } from 'src/app/_shared/_services/toasts/toasts.service';
 
 @Component({
   selector: 'app-toasts',
@@ -6,16 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toasts.component.scss']
 })
 export class ToastsComponent implements OnInit {
-  isLargeSize : boolean = false;
-  message : string = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
-  bgColor : string = 'var(--color-brown)';
-  color : string = 'var(--color-white)';
+  isLargeSize: boolean = false;
 
-  ngOnInit(): void {
-    this.checkMessageSize(this.message)
+  get toast() {
+    return this.ToastsService.toast;
   }
 
-  checkMessageSize(message : string) {
+  constructor(private ToastsService: ToastsService) { }
+
+  ngOnInit(): void {
+    this.checkMessageSize(this.toast.message)
+  }
+
+  checkMessageSize(message: string) {
     return message.length >= 30;
   }
 
