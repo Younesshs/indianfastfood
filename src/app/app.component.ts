@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ResponsiveService } from './_services/responsive/responsive.service';
+import { LoaderService } from './_shared/_services/loader/loader.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,14 @@ import { ResponsiveService } from './_services/responsive/responsive.service';
 export class AppComponent implements OnInit {
   title = 'indian-fast-food';
 
-  constructor(private ResponsiveService: ResponsiveService) { }
+  get isLoad() {
+    return this.LoaderService.isLoad;
+  }
+
+  constructor(
+    private ResponsiveService: ResponsiveService,
+    private LoaderService: LoaderService
+  ) { }
 
   ngOnInit(): void {
     this.ResponsiveService.deviceDetection();

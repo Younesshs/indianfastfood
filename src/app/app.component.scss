@@ -4,21 +4,20 @@
     overflow: hidden;
 }
 
-.large-loader {
+.toast-container {
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    // z-index: 1; Dans styles/z-index.css
+}
+
+.large-loader-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: red;
     // z-index: 2; Dans styles/z-index.css
-}
-
-.toasts {
-    position: absolute;
-    // width: 100%;
-    // height: 100%;
-    // z-index: 1; Dans styles/z-index.css
 }
 
 .app-container {

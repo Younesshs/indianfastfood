@@ -9,6 +9,8 @@
 }
 
 @import '_themes/indianfastfood-theme.scss';
+@import './z-index.css';
+@import './animations.css';
 
 html, body { width: 100%; height: 100%; }
 body {
@@ -16,4 +18,8 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue",
     sans-serif;
+}
+
+mat-icon {
+    cursor: pointer;
 }

@@ -35,6 +35,21 @@
         <div>
             <p>Un fichier dans styles/z-index.css est disponible pour définir les couches des différents composants</p>
         </div>
+        <hr>
+        <br>
+        <h2>Animations</h2>
+        <div>
+            <p>Vous retrouvez des petites animations dans le fichier styles/animations.css</p>
+            <div class="animations">
+                <button mat-raised-button color="primary" class="pulse">Cliquez-moi</button>|
+                <div class="bounce">Texte rebondissant</div>|
+                <div class="rotate">Texte qui tourne</div>|
+                <p class="fade-in">Texte apparaissant progressivement</p>|
+                <div class="slide-in">Contenu qui glisse</div>
+            </div>
+            <br>
+            <p>Pour appliquer l'animation appliquer la class sur l'élément HTML</p>           
+        </div>
     </section>
     <section class="routing">
         <h2>Routing</h2>
@@ -52,7 +67,8 @@
                 <p><small>Composants du module Public :</small></p>
                 <button mat-raised-button color="primary" routerLink="/public/menu">Public -> menu</button>
                 <button mat-raised-button color="primary" routerLink="/public/cart">Public -> cart</button>
-                <button mat-raised-button color="primary" routerLink="/public/documentation">Public -> documentation</button>
+                <button mat-raised-button color="primary" routerLink="/public/documentation">Public ->
+                    documentation</button>
             </div>
             <div>
                 <p><small>Composants du module Auth :</small></p>
