@@ -10,17 +10,15 @@ export class LoaderService {
 
   constructor() { }
 
-  openLargeLoaderWithTimer(time: number): void {
-    if (time) {
+  openLargeLoader(time: number | null = null) {
+    if (time !== null) {
       this.isLoad = true;
       setTimeout(() => {
         this.isLoad = false;
       }, (time * 1000));
+    } else {
+      this.isLoad = true;
     }
-  }
-
-  openLargeLoader(): void {
-    this.isLoad = true;
   }
 
   closeLargeLoader(): void {

@@ -14,18 +14,25 @@ export class DocumentationComponent {
     exampleOne: {
       "message": "< 30 caractères",
       "bgColor": "var(--color-brown)",
-      "color": "var(--color-white)"
+      "color": "var(--color-white)",
+      "timer": 3000
     },
     exampleTwo: {
       "message": "Toasts example >= 30 caractères",
       "bgColor": "var(--color-light-brown)",
-      "color": "var(--color-white)"
+      "color": "var(--color-white)",
+      "timer": 5000
     },
   }
 
   get device() {
     return this.ResponsiveService.device
   }
+
+  code_loader : string = `
+  openLoaderExample(time : number) \{
+    this.LoaderService.openLargeLoader(time);
+  }`;
 
   constructor(
     private ResponsiveService: ResponsiveService, 
@@ -44,7 +51,7 @@ export class DocumentationComponent {
   }
 
   openLoaderExample(time : number) {
-    this.LoaderService.openLargeLoaderWithTimer(time);
+    this.LoaderService.openLargeLoader(time);
   }
 
 }
