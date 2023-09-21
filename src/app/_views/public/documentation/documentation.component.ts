@@ -14,12 +14,14 @@ export class DocumentationComponent {
     exampleOne: {
       "message": "< 30 caractères",
       "bgColor": "var(--color-brown)",
-      "color": "var(--color-white)"
+      "color": "var(--color-white)",
+      "timer": 3000
     },
     exampleTwo: {
       "message": "Toasts example >= 30 caractères",
       "bgColor": "var(--color-light-brown)",
-      "color": "var(--color-white)"
+      "color": "var(--color-white)",
+      "timer": 5000
     },
   }
 

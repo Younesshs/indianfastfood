@@ -8,7 +8,8 @@ export class ToastsService {
   toast: any = {
     message: null,
     bgColor: null,
-    color: null
+    color: null,
+    timer: null
   };
 
   openToast(toast: any): void {
@@ -22,7 +23,7 @@ export class ToastsService {
           bgColor: null,
           color: null
         };
-      }, 5000);
+      }, this.toast.timer);
     }
   }
 
