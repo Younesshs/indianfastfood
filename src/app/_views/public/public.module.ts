@@ -8,13 +8,15 @@ import { PlayoutComponent } from './playout/playout.component';
 import { DocumentationComponent } from './documentation/documentation.component';
 
 import { MaterialsModule } from 'src/app/_shared/materials/materials.module';
+import { FactureComponent } from './facture/facture.component';
 
 @NgModule({
   declarations: [
     MenuComponent,
     CartComponent,
     PlayoutComponent,
-    DocumentationComponent
+    DocumentationComponent,
+    FactureComponent
   ],
   imports: [
     CommonModule,
