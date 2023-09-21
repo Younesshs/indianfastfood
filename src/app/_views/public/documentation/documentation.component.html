@@ -152,8 +152,12 @@
         <hr>
         <h3>Mettre en place un loader</h3>
         <p>Vous devez importez le service LoaderService dans le composant ou le loader dois etre activé</p><br>
-        <p>Si vous connaissez le temps de chargement vous pourrez utiliser la methode this.LoaderService.openLargeLoaderWithTimer(number en secondes)</p><br>
-        <p>Sinon les methodes, openLargeLoader() et closeLargeLoader() sont disponibles pour les placer dans la logique de votre code</p>
+        <p>Ajouter maintenant une fonction dans le fichier ts de votre composant</p>
+        <pre>
+            {{code_loader}}
+        </pre>
+        <p>Si vous connaissez le temps de chargement vous pourrez utiliser l'attribue 'TIME'</p><br>
+        <p>Sinon vous devrez utiliser la méthode, closeLargeLoader() pour fermer le loader dans la logique de votre code</p>
     </section>
     <section>
         <!-- COMPOSANTS RESPONSIVES -->

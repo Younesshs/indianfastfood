@@ -27,6 +27,11 @@ export class DocumentationComponent {
     return this.ResponsiveService.device
   }
 
+  code_loader : string = `
+  openLoaderExample(time : number) \{
+    this.LoaderService.openLargeLoader(time);
+  }`;
+
   constructor(
     private ResponsiveService: ResponsiveService, 
     private ToastsService: ToastsService,
@@ -44,7 +49,7 @@ export class DocumentationComponent {
   }
 
   openLoaderExample(time : number) {
-    this.LoaderService.openLargeLoaderWithTimer(time);
+    this.LoaderService.openLargeLoader(time);
   }
 
 }
