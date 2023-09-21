@@ -145,10 +145,16 @@
         <p><small>Le toast se ferme 5 secondes après sont ouverture</small></p>
     </section>
     <section>
-        <!-- COMPOSANTS LOADER -->
         <h2>Loader</h2>
+        <p>Pour les longs actions de l'application un composant large-loader et disponible</p><br>
+        <p>Pour le changememnt de module par exemple</p><br>
+        <button mat-raised-button color="warn" (click)="openLoaderExample(3)">Tester le large-loader (3 secondes)</button>
+        <hr>
+        <h3>Mettre en place un loader</h3>
+        <p>Vous devez importez le service LoaderService dans le composant ou le loader dois etre activé</p><br>
+        <p>Si vous connaissez le temps de chargement vous pourrez utiliser la methode this.LoaderService.openLargeLoaderWithTimer(number en secondes)</p><br>
+        <p>Sinon les methodes, openLargeLoader() et closeLargeLoader() sont disponibles pour les placer dans la logique de votre code</p>
     </section>
-
     <section>
         <!-- COMPOSANTS RESPONSIVES -->
         <h2>Format d'écran</h2>

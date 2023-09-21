@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ResponsiveService } from 'src/app/_services/responsive/responsive.service';
+import { LoaderService } from 'src/app/_shared/_services/loader/loader.service';
 import { ToastsService } from 'src/app/_shared/_services/toasts/toasts.service';
 
 @Component({
@@ -26,7 +27,11 @@ export class DocumentationComponent {
     return this.ResponsiveService.device
   }
 
-  constructor(private ResponsiveService: ResponsiveService, private ToastsService: ToastsService) { }
+  constructor(
+    private ResponsiveService: ResponsiveService, 
+    private ToastsService: ToastsService,
+    private LoaderService: LoaderService
+  ) { }
 
   openToastExampleOne() {
     this.ToastsService.setToast(this.toasts.exampleOne);
@@ -36,6 +41,10 @@ export class DocumentationComponent {
   openToastExampleTwo() {
     this.ToastsService.setToast(this.toasts.exampleTwo);
     this.ToastsService.openToast(this.toasts.exampleTwo);
+  }
+
+  openLoaderExample(time : number) {
+    this.LoaderService.openLargeLoaderWithTimer(time);
   }
 
 }

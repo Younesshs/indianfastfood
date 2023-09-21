@@ -5,12 +5,26 @@ import { Injectable } from '@angular/core';
 })
 export class LoaderService {
 
-  isLoad : boolean = false;
+  isLoad: boolean = false;
+  message!: string;
 
   constructor() { }
 
-  toggleLoader(): void {
-    this.isLoad = !this.isLoad;
+  openLargeLoaderWithTimer(time: number): void {
+    if (time) {
+      this.isLoad = true;
+      setTimeout(() => {
+        this.isLoad = false;
+      }, (time * 1000));
+    }
+  }
+
+  openLargeLoader(): void {
+    this.isLoad = true;
+  }
+
+  closeLargeLoader(): void {
+    this.isLoad = false;
   }
 
 }
