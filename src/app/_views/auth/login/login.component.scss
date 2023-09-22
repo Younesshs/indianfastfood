@@ -3,3 +3,34 @@
     height: 100%;
     overflow: hidden;
 }
+h2 {
+    margin-top: 3rem;
+    text-align: center;
+    // color: --color-white;  ??
+}
+.login-champs {
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+    height: 35em;
+    background-color: white;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    
+    
+    .login-champs-field {
+        mat-form-field+mat-form-field {
+            margin-left: 8px;
+        }
+
+        input.example-right-align::-webkit-outer-spin-button,
+        input.example-right-align::-webkit-inner-spin-button {
+            display: none;
+        }
+    }
+    .button_inscrire {
+        width: 20rem;
+        height: 20rem;
+    }
+}

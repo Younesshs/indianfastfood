@@ -1,3 +1,11 @@
-<div class="app-container">
-    <router-outlet></router-outlet>
+<div class="app">
+    <div *ngIf="isToast" class="toast-container">
+        <app-toasts></app-toasts>
+    </div>
+    <div *ngIf="isLoad" class="large-loader-container">
+        <app-large-loader></app-large-loader>
+    </div>
+    <div class="app-container">
+        <router-outlet></router-outlet>
+    </div>
 </div>

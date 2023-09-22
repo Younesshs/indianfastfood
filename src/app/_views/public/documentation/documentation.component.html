@@ -1,35 +1,67 @@
 <div class="documentation-container">
-    <h2>Documentation sur l'application</h2>
+    <h1>Documentation sur l'application</h1>
+
     <section>
-        <h2>Élements de styles</h2>
-        <div>
-            <p>Utiliser les couleurs dans les composants MATERIALS avec l'attirbue color:'accent' <br>
-                et pour les autres elements HTML etc ... vous pourrez utiliser dans vos fichiers css
-                var(--color-lacouleur) voir dans le fichier styles.scss</p>
-            <div class="example-label">ROOT Color</div>
-            <div class="example-color-row">
-                <div class="color-card" id="ccb29b">#ccb29b</div>
-                <div class="color-card" id="Five45454">#545454</div>
-                <div class="color-card" id="fff">#fff</div>
-                <div class="color-card" id="d4d4d4">#d4d4d4</div>
-                <div class="color-card" id="Eightf8e8e">#8f8e8e</div>
-                <div class="color-card" id="fad699">#fad699</div>
-                <div class="color-card" id="f8b94d">#f8b94d</div>
-            </div>
-        </div>
-        <hr>
-        <div>
-            <div class="example-label">Raised Button</div>
-            <div class="example-button-row">
-                <button mat-raised-button>Basic</button>
-                <button mat-raised-button color="primary">Primary</button>
-                <button mat-raised-button color="accent">Accent</button>
-                <button mat-raised-button color="warn">Warn</button>
-                <button mat-raised-button disabled>Disabled</button>
-                <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
-            </div>
+        <h2>Éléments de styles</h2>
+        <p>Utilisez les couleurs dans les composants MATERIAL avec l'attribut <code>color:'accent'</code>. Pour les
+            autres éléments HTML, vous pouvez utiliser dans vos fichiers CSS <code>var(--color-lacouleur)</code> (voir
+            dans le fichier <code>styles.scss</code>).</p>
+        <div class="example-label">ROOT Color</div>
+        <div class="example-color-row">
+            <div class="color-card" id="ccb29b">#ccb29b<br>light-brown</div>
+            <div class="color-card" id="Five45454">#545454<br>brown</div>
+            <div class="color-card" id="fff">#fff<br>white</div>
+            <div class="color-card" id="d4d4d4">#d4d4d4<br>light-grey</div>
+            <div class="color-card" id="Eightf8e8e">#8f8e8e<br>grey</div>
+            <div class="color-card" id="fad699">#fad699<br>light-orange</div>
+            <div class="color-card" id="f8b94d">#f8b94d<br>orange</div>
         </div>
     </section>
+
+    <section>
+        <h2>Raised Button</h2>
+        <div class="example-button-row">
+            <button mat-raised-button>Basic</button>
+            <button mat-raised-button color="primary">Primary</button>
+            <button mat-raised-button color="accent">Accent</button>
+            <button mat-raised-button color="warn">Warn</button>
+            <button mat-raised-button disabled>Disabled</button>
+            <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Z-index</h2>
+        <p>Un fichier dans <code>styles/z-index.css</code> est disponible pour définir les couches des différents
+            composants.</p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Animations</h2>
+        <p>Vous trouverez des petites animations dans le fichier <code>styles/animations.css</code>.</p>
+        <div class="animations">
+            <button mat-raised-button color="primary" class="pulse">Cliquez-moi</button>|
+            <div class="bounce">Texte rebondissant</div>|
+            <div class="rotate">Texte qui tourne</div>|
+            <p class="fade-in">Texte apparaissant progressivement</p>|
+            <div class="slide-in">Contenu qui glisse</div>
+        </div>
+        <hr>
+        <h3>Animations au survol</h3>
+        <p>Vous pouvez ajouter un effet d'opacity au survol avec la classe <code>"hover-opacity"</code> dans vos
+            éléments HTML.</p>
+        <p>Survolez-moi</p>
+        <mat-icon class="hover-opacity">visibility</mat-icon>
+        <br>
+        <p>Pour appliquer l'animation, appliquez la classe sur l'élément HTML.</p>
+    </section>
+
+    <hr>
+
     <section class="routing">
         <h2>Routing</h2>
         <h3>Naviger dans l'application</h3>
@@ -44,9 +76,11 @@
         <div>
             <div>
                 <p><small>Composants du module Public :</small></p>
+                <button mat-raised-button color="primary" routerLink="/public/home">Public -> home</button>
                 <button mat-raised-button color="primary" routerLink="/public/menu">Public -> menu</button>
                 <button mat-raised-button color="primary" routerLink="/public/cart">Public -> cart</button>
-                <button mat-raised-button color="primary" routerLink="/public/documentation">Public -> documentation</button>
+                <button mat-raised-button color="primary" routerLink="/public/documentation">Public ->
+                    documentation</button>
             </div>
             <div>
                 <p><small>Composants du module Auth :</small></p>
@@ -94,14 +128,54 @@
             une page d'erreur 404, par exemple, indiquant que la page demandée n'existe pas. <br>
         </p>
     </section>
-    <section>
-        <!-- COMPOSANTS LOADER -->
-        <h2>Loader</h2>
-    </section>
-    <section>
-        <!-- COMPOSANTS TOAST -->
+
+    <hr>
+
+    <section class="toasts">
         <h2>Toast</h2>
+        <p>Un service et un composant on était ajouté au projet pour facilité l'affichage de message dynamique</p>
+        <div class="toast-example">
+            <button mat-raised-button color="primary" (click)="openToastExampleOne()">Ouvrir un toast
+                (example < 30)</button>
+                    <button mat-raised-button color="primary" (click)="openToastExampleTwo()">Ouvrir un toast (example
+                        >= 30)</button>
+        </div>
+        <hr>
+        <div>
+            <h4>Ajouter un toast</h4>
+            <p>Se rendre dans le .ts du composant (ou doit etre afficher le toast)</p><br>
+            <p>Crée la variable toast</p>
+            <p>{{toasts | json}}</p><br>
+            <p>Importer le service</p><br>
+            <p>Crée la fonction permettant d'ouvrir le toast (par ex: openToastExampleOne(toasts.exampleOne)) et entrée
+                en parametre l'object que vous avez crée avant</p>
+            <p>Vous pourrez maintenant ajout a vos elements (click)="openToastExampleOne(toasts.exampleOne)"</p>
+        </div>
+        <p><small>Le toast se ferme x secondes après sont ouverture (configurer dans l'object en amont)</small></p>
     </section>
+
+    <hr>
+
+    <section>
+        <h2>Loader</h2>
+        <p>Pour les longs actions de l'application un composant large-loader et disponible</p><br>
+        <p>Pour le changememnt de module par exemple</p><br>
+        <button mat-raised-button color="warn" (click)="openLoaderExample(3)">Tester le large-loader (3
+            secondes)</button>
+        <hr>
+        <h3>Mettre en place un loader</h3>
+        <p>Vous devez importez le service LoaderService dans le composant ou le loader dois etre activé</p><br>
+        <p>Ajouter maintenant une fonction dans le fichier ts de votre composant</p>
+        <pre>
+            {{code_loader}}
+        </pre>
+        <p>Si vous connaissez le temps de chargement vous pourrez utiliser l'attribue 'TIME'</p><br>
+        <p>Sinon vous devrez utiliser la méthode, closeLargeLoader() pour fermer le loader dans la logique de votre code
+        </p>
+    </section>
+
+    <hr>
+
     <section>
         <!-- COMPOSANTS RESPONSIVES -->
         <h2>Format d'écran</h2>

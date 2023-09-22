@@ -1,0 +1,11 @@
+.toast-container {
+    z-index: 2;
+}
+
+.large-loader-container {
+    z-index: 1;
+}
+
+.app-container {
+    z-index: 0;
+}
