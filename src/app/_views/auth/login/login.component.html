@@ -1,37 +1,46 @@
 <div class="login-container">
     <h2>Login</h2>
 
-    <form class="login-champs">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"class="login-champs">
         <mat-form-field class="login-champs-field">
             <mat-label>Nom</mat-label>
-            <input required matInput="Nom">
+            <input matInput formControlName="lastName">
         </mat-form-field>
+        <div *ngIf="this.errorMessage" class="error_msg">{{ errorMessage }}</div>
+
         <mat-form-field class="login-champs-field">
             <mat-label>Prénom</mat-label>
-            <input required matInput="prénom">
+            <input matInput formControlName="firstName">
         </mat-form-field>
+        <!-- <mat-error class="error_msg" *ngIf="loginForm.get('firstName')?.errors?.['required']">Votre prénom n'est pas
+            valide.</mat-error> -->
+
         <mat-form-field class="login-champs-field">
             <mat-label>Email</mat-label>
-            <input matInput placeholder="indian.f@example.com" required matInput="email">
+            <input matInput placeholder="indian.f@example.com" matInput formControlName="email">
         </mat-form-field>
-        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+      <!-- <mat-error class="error_msg" *ngIf="loginForm.get('email')?.errors?.['required']">L'e-mail n'est pas
+            valide.</mat-error> -->
         <mat-form-field>
             <mat-label>Enter your password</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'">
+            <input matInput [type]="hide ? 'password' : 'text'" matInput formControlName="password">
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
         </mat-form-field>
+        <!-- <mat-error class="error_msg" *ngIf="loginForm.get('password')?.errors?.['required']">Votre password n'est pas
+            valide.</mat-error> -->
         <mat-form-field>
             <mat-label>Enter your password</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'">
+            <input matInput [type]="hide ? 'password' : 'text'" matInput formControlName="confirmPassword">
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
         </mat-form-field>
-
-        <button classe= "button_inscrire"mat-raised-button color="primary" routerLink="/auth/register">S'inscrire</button>
+        <!-- <mat-error class="error_msg" *ngIf="loginForm.get('confirmPassword')?.errors?.['required']">Votre password n'est pas
+            valide.</mat-error> -->
+        <button classe= "button_inscrire" mat-raised-button color="primary" routerLink="/auth/register" (click)="onSubmit()">S'inscrire</button>
     </form>
 </div>

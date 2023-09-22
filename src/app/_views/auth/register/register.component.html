@@ -1,27 +1,36 @@
 <div class="register-container">
     <h2>Création de compte</h2>
-    
-    <form class="register-champs">
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate class="register-champs">
         <mat-form-field class="register-champs-field">
             <mat-label>Nom</mat-label>
-            <input required matInput="Nom">
+            <input matInput formControlName="lastName">
         </mat-form-field>
+        <!-- <mat-error class="error_msg" *ngIf="registerForm.get('lastName')?.hasError('required')">Votre nom n'est pas
+            valide.</mat-error> -->
+
         <mat-form-field class="register-champs-field">
             <mat-label>Prénom</mat-label>
-            <input required matInput="prénom">
+            <input matInput formControlName="firstName">
         </mat-form-field>
+        <!-- <mat-error class="error_msg" *ngIf="registerForm.get('fistName')?.hasError('required')">Votre nom n'est pas
+            valide.</mat-error> -->
+
         <mat-form-field class="login-champs-field">
             <mat-label>Email</mat-label>
-            <input matInput placeholder="indian.f@example.com" required matInput="email">
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            <input placeholder="indian.f@example.com" matInput formControlName="email">
         </mat-form-field>
+        <!-- <mat-error class="error_msg" *ngIf="registerForm.get('email')?.errors?.['required']">L'e-mail n'est pas
+            valide.</mat-error> -->
+
         <mat-form-field class="register-champs-field">
             <mat-label>Téléphone</mat-label>
-            <input required matInput="téléphone">
+            <input placeholder="06.01.02.03.05" matInput formControlName="phoneNumber">
         </mat-form-field>
+
         <mat-form-field>
             <mat-label>Enter your password</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'">
+            <input matInput [type]="hide ? 'password' : 'text'" matInput formControlName="password">
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -29,13 +38,14 @@
         </mat-form-field>
         <mat-form-field>
             <mat-label>Enter your password</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'">
+            <input matInput [type]="hide ? 'password' : 'text'" matInput formControlName="confirmPassword">
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
         </mat-form-field>
-   
-    <button mat-raised-button color="primary" routerLink="/auth/login">Se connecter</button>
-</form>
+
+        <button mat-raised-button color="primary" routerLink="/auth/login" (click)="onSubmit()" type="submit">Se
+            connecter</button>
+    </form>
 </div>

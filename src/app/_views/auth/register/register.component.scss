@@ -6,20 +6,20 @@
 h2 {
     margin-top: 3rem;
     text-align: center;
-    
+    color: var(--color-white);
 }
 .register-champs {
     display: flex;
     flex-direction: column;
     width: 25em;
     height: 37em;
-    background-color: white;
+    background-color: var(--color-white);
     padding: 3rem;
     margin-bottom: 2rem;
     border-radius: 2rem;
 
-    .register-champs-field {
-        mat-form-field+mat-form-field {
+    &-field {
+        .mat-form-field+mat-form-field {
             margin-left: 8px;
         }
 
@@ -28,5 +28,9 @@ h2 {
             display: none;
         }
     }
+.error_msg {
+    color: red;
+    margin-top: 0;
+}
 
 }

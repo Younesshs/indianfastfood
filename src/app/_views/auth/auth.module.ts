@@ -5,6 +5,9 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { AlayoutComponent } from './alayout/alayout.component';
 import { RegisterComponent } from './register/register.component';
+import {MatTableModule} from '@angular/material/table'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { MaterialsModule } from 'src/app/_shared/materials/materials.module';
 
@@ -18,7 +21,9 @@ import { MaterialsModule } from 'src/app/_shared/materials/materials.module';
     CommonModule,
     AuthRoutingModule,
     MaterialsModule,
-    
+    MatTableModule,
+    FormsModule,
+    ReactiveFormsModule 
   ]
 })
 export class AuthModule { }
