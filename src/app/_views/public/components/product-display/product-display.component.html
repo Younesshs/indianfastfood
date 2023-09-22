@@ -1,0 +1,12 @@
+<div *ngIf="product != null">
+  <mat-card class="product-card">
+    <img mat-card-image src={{product.imagesUrls[0]}} alt="Photo of product" class="product-card__img">
+    <div class="product-card__info">
+      <h2>{{product.name}}</h2>
+      <p>
+        {{product.price | currency:'EUR' :'symbol':'1.2-2'}}
+      </p>
+      <app-add-to-cart></app-add-to-cart>
+    </div>
+  </mat-card>
+</div>

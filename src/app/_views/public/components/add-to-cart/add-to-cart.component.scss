@@ -1,0 +1,15 @@
+.product-card {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 20px;
+}
+
+.add-to-cart__button {
+  background-color: var(--color-grey);
+}
+
+.product-card__img {
+  max-width: 40%;
+  max-height: 90%;
+  object-fit: contain;
+}
