@@ -9,6 +9,7 @@ import { PlayoutComponent } from './playout/playout.component';
 import { DocumentationComponent } from './documentation/documentation.component';
 
 import { MaterialsModule } from 'src/app/_shared/materials/materials.module';
+import { FactureComponent } from './facture/facture.component';
 import { ProductDisplayComponent } from './components/product-display/product-display.component';
 import { AddToCartComponent } from './components/add-to-cart/add-to-cart.component';
 import { AddOrUpdateOrderitemDialogComponent } from './components/add-or-update-orderitem-dialog/add-or-update-orderitem-dialog.component';
@@ -21,6 +22,7 @@ import { PnavigationComponent } from './pnavigation/pnavigation.component';
     CartComponent,
     PlayoutComponent,
     DocumentationComponent,
+    FactureComponent
     ProductDisplayComponent,
     AddToCartComponent,
     AddOrUpdateOrderitemDialogComponent,
