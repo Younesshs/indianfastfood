@@ -7,9 +7,9 @@ const serverInfo = {
   },
   db: {
     host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USER || '', // TODO: Compléter
-    password: process.env.DB_PASSWORD || '', // TODO: Compléter
-    database: process.env.DB_NAME || '' // TODO: Compléter
+    user: process.env.DB_USER || 'indienfastfood',
+    password: process.env.DB_PASSWORD || 'indienfastfood',
+    database: process.env.DB_NAME || 'indienfastfood'
   }
 };
 

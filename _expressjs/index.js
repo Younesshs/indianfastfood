@@ -2,8 +2,9 @@ const express = require("express");
 const session = require("express-session");
 const bodyparser = require("body-parser");
 const cors = require("cors");
-const exampleRoutes = require("./_routes/exampleRoutes");
 const serverInfo = require('./_config/config.js');
+const exampleRoutes = require("./_routes/exampleRoutes");
+const authRoutes = require("./_routes/auhRoutes");
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(session({
 }));
 
 app.use('/example', exampleRoutes);
+app.use('/auth', authRoutes);
 
 app.listen(serverInfo.port.server, () => {
     console.log();
