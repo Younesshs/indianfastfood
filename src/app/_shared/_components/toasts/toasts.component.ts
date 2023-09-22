@@ -8,6 +8,7 @@ import { ToastsService } from 'src/app/_shared/_services/toasts/toasts.service';
 })
 export class ToastsComponent implements OnInit {
   isLargeSize: boolean = false;
+  isMessageSize: boolean = false;
 
   get toast() {
     return this.ToastsService.toast;
@@ -16,7 +17,7 @@ export class ToastsComponent implements OnInit {
   constructor(private ToastsService: ToastsService) { }
 
   ngOnInit(): void {
-    this.checkMessageSize(this.toast.message)
+    this.isMessageSize = this.checkMessageSize(this.toast.message) ? true : false;
   }
 
   checkMessageSize(message: string) {

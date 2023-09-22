@@ -6,7 +6,7 @@
     <div [ngClass]="{'toast-content': !isLargeSize, 'toast-content-large-size': isLargeSize}">
         <p [ngClass]="{'message': !isLargeSize, 'message-large-size': isLargeSize}">{{toast.message}} <span
                 *ngIf="checkMessageSize(toast.message)"></span></p>
-        <mat-icon *ngIf="isLargeSize" class="hover-opacity"
+        <mat-icon *ngIf="isMessageSize" class="hover-opacity"
             [ngClass]="{'size-icon': !isLargeSize, 'size-icon-large-size': isLargeSize}"
             (click)="editSizeOfToasts()">{{isLargeSize ? "remove" : "settings_ethernet"}}</mat-icon>
     </div>
