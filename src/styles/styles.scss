@@ -12,14 +12,12 @@
 
 html,
 body {
-  width: 100%;
   height: 100%;
+  background-color: var(--color-brown);
 }
 
 body {
   height: 100vh;
-  width: 100vw;
-  margin: 5%;
   font-family: Roboto, "Helvetica Neue",
     sans-serif;
 }
