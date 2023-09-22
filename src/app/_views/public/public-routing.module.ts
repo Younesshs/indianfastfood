@@ -12,7 +12,7 @@ const routes: Routes = [
   { 
     path: '', component: PlayoutComponent,
     children: [
-      { path: '', redirectTo: 'documentation', pathMatch: 'full' },
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent},
       { path: 'menu', component: MenuComponent },
       { path: 'cart', component: CartComponent },
