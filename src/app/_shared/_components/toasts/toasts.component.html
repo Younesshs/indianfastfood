@@ -1,0 +1,13 @@
+<div class="toast-container slide-in" [ngStyle]="{'background-color': toast.bgColor, 'color': toast.color}"
+    [ngClass]="{'toast-container-large-size': isLargeSize}">
+    <div class="progress-bar">
+        <mat-progress-bar color="accent" mode="query"></mat-progress-bar>
+    </div>
+    <div [ngClass]="{'toast-content': !isLargeSize, 'toast-content-large-size': isLargeSize}">
+        <p [ngClass]="{'message': !isLargeSize, 'message-large-size': isLargeSize}">{{toast.message}} <span
+                *ngIf="checkMessageSize(toast.message)"></span></p>
+        <mat-icon *ngIf="isMessageSize" class="hover-opacity"
+            [ngClass]="{'size-icon': !isLargeSize, 'size-icon-large-size': isLargeSize}"
+            (click)="editSizeOfToasts()">{{isLargeSize ? "remove" : "settings_ethernet"}}</mat-icon>
+    </div>
+</div>
