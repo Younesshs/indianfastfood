@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Facture } from 'src/app/facture';
+import { FACTURES } from 'src/app/mock_factures';
 
 @Component({
   selector: 'app-facture',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class FactureComponent {
   today: number = Date.now();
+
+  factures = FACTURES;
 }
