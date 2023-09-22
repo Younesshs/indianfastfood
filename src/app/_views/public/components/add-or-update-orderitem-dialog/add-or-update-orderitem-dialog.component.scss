@@ -1,0 +1,15 @@
+.add_update_orderitem_dialog__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.add-to-cart-dialog-form {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  row-gap: 5%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
