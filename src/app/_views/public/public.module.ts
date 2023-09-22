@@ -22,7 +22,7 @@ import { PnavigationComponent } from './pnavigation/pnavigation.component';
     CartComponent,
     PlayoutComponent,
     DocumentationComponent,
-    FactureComponent
+    FactureComponent,
     ProductDisplayComponent,
     AddToCartComponent,
     AddOrUpdateOrderitemDialogComponent,
