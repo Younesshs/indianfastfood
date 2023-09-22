@@ -8,7 +8,7 @@ export const Products: ProductDisplay[] = [
     productionDate: new Date(),
     stockQuantity: 10,
     imagesUrls: [
-      'https://www.indianhealthyrecipes.com/wp-content/uploads/2014/11/dal-tadka-recipe.jpg',
+      'https://static.750g.com/images/1200-630/06e0a3d7987f55ada249cc87cc759488/dhal.jpg',
     ],
   },
   {
@@ -18,7 +18,7 @@ export const Products: ProductDisplay[] = [
     productionDate: new Date(),
     stockQuantity: 10,
     imagesUrls: [
-      'https://www.indianhealthyrecipes.com/wp-content/uploads/2019/02/hyderabadi-biryani-recipe.jpg',
+      'https://www.yumelise.fr/wp-content/uploads/2021/11/biryani-poulet.jpg',
     ],
   },
   {
@@ -28,7 +28,7 @@ export const Products: ProductDisplay[] = [
     productionDate: new Date(),
     stockQuantity: 10,
     imagesUrls: [
-      'https://www.indianhealthyrecipes.com/wp-content/uploads/2019/02/butter-chicken-recipe.jpg',
+      'https://www.daringgourmet.com/wp-content/uploads/2019/12/Butter-Chicken-7.jpg',
     ],
   },
   {
@@ -38,7 +38,7 @@ export const Products: ProductDisplay[] = [
     productionDate: new Date(),
     stockQuantity: 10,
     imagesUrls: [
-      'https://www.indianhealthyrecipes.com/wp-content/uploads/2019/02/tandoori-chicken-recipe.jpg',
+      'https://www.allrecipes.com/thmb/ayYKam8g3aGUfLZdVvhnwrRxXuw=/0x512/filters:no_upscale():max_bytes(150000):strip_icc()/50347-indian-tandoori-chicken-DDMFS-4x3-3035-205e98c80b2f4275b5bd010c396d9149.jpg',
     ],
   },
   {
@@ -58,7 +58,7 @@ export const Products: ProductDisplay[] = [
     productionDate: new Date(),
     stockQuantity: 10,
     imagesUrls: [
-      'https://www.indianhealthyrecipes.com/wp-content/uploads/2019/02/palak-paneer-recipe.jpg',
+      'https://www.vegrecipesofindia.com/wp-content/uploads/2021/06/palak-paneer-3.jpg',
     ],
   },
   {
@@ -68,7 +68,7 @@ export const Products: ProductDisplay[] = [
     productionDate: new Date(),
     stockQuantity: 10,
     imagesUrls: [
-      'https://www.indianhealthyrecipes.com/wp-content/uploads/2019/02/chole-bhature-recipe.jpg',
+      'https://i0.wp.com/swadisht.life/en/wp-content/uploads/2023/02/Chole-Bhature-Recipe.jpg',
     ],
   },
   {
@@ -78,7 +78,7 @@ export const Products: ProductDisplay[] = [
     productionDate: new Date(),
     stockQuantity: 10,
     imagesUrls: [
-      'https://www.indianhealthyrecipes.com/wp-content/uploads/2019/02/rajma-recipe.jpg',
+      'https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/rajma-recipe-2-500x500.jpg',
     ],
   },
   {
@@ -88,7 +88,7 @@ export const Products: ProductDisplay[] = [
     productionDate: new Date(),
     stockQuantity: 10,
     imagesUrls: [
-      'https://www.indianhealthyrecipes.com/wp-content/uploads/2019/02/pav-bhaji-recipe.jpg',
+      'https://shwetainthekitchen.com/wp-content/uploads/2022/07/Pav-bhaji.jpg',
     ],
   },
   {
@@ -98,7 +98,7 @@ export const Products: ProductDisplay[] = [
     productionDate: new Date(),
     stockQuantity: 10,
     imagesUrls: [
-      'https://www.indianhealthyrecipes.com/wp-content/uploads/2019/02/pani-puri-recipe.jpg',
+      'https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/pani_puri_90458_16x9.jpg',
     ],
   },
 ];
