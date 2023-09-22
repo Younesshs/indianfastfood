@@ -16,7 +16,7 @@ export const Products: ProductDisplay[] = [
     name: 'Biryani',
     price: 15.5,
     productionDate: new Date(),
-    stockQuantity: 10,
+    stockQuantity: 0,
     imagesUrls: [
       'https://www.yumelise.fr/wp-content/uploads/2021/11/biryani-poulet.jpg',
     ],
