@@ -9,7 +9,7 @@
     "test": "ng test",
     "start": "npm-run-all --parallel start:ng start:server",
     "start:ng": "ng serve",
-    "start:server": "cd _expressjs && node index.js"
+    "start:server": "cd _expressjs && nodemon index.js"
   },
   "private": true,
   "dependencies": {
