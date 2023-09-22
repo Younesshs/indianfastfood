@@ -12,10 +12,10 @@ const routes: Routes = [
     path: '', component: PlayoutComponent,
     children: [
       { path: '', redirectTo: 'documentation', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent},
       { path: 'menu', component: MenuComponent },
       { path: 'cart', component: CartComponent },
       { path: 'documentation', component: DocumentationComponent },
-      { path: 'home', component: HomeComponent}
     ]
   }
 ];

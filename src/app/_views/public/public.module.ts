@@ -9,6 +9,7 @@ import { DocumentationComponent } from './documentation/documentation.component'
 
 import { MaterialsModule } from 'src/app/_shared/materials/materials.module';
 import { HomeComponent } from './home/home.component';
+import { PnavigationComponent } from './pnavigation/pnavigation.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     CartComponent,
     PlayoutComponent,
     DocumentationComponent,
-    HomeComponent
+    HomeComponent,
+    PnavigationComponent
   ],
   imports: [
     CommonModule,

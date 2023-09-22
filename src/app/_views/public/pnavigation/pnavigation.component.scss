@@ -1,0 +1,20 @@
+.navigation-list {
+    display: flexbox;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.navigation-list li {
+    float: left;
+    color: var(--color-white);
+    background-color: var(--color-grey);
+    list-style: none;
+    text-align: center;
+    border-radius: 8px;
+    font-size: large;
+    margin-right: 30px;
+    width: 150px;
+    line-height: 60px;
+    cursor: pointer;
+}
