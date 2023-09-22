@@ -1,0 +1,18 @@
+.product-card {
+  display: flex;
+  flex-flow: row nowrap;
+  max-height: 30vh;
+  justify-content: space-around;
+  margin: 5% 0;
+  padding: 20px;
+}
+
+.product-card__img {
+  width: 40%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.desactived {
+  filter: grayscale(1);
+}

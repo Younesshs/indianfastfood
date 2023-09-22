@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>Modifier la quantité</h2>
+<div mat-dialog-content class="add-to-cart-dialog-form">
+  <label>Quantité : </label>
+  <mat-form-field>
+    <mat-select matNativeControl [(ngModel)]="quantity" placeholder="Quantité">
+      <mat-option value="1">1</mat-option>
+      <mat-option value="2">1</mat-option>
+      <mat-option value="3">3</mat-option>
+      <mat-option value="4">4</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <label>Commentaire : </label>
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="comment" placeholder="Commentaire"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="close()"> Ajouter <i class="material-icons">shopping_cart</i></button>
+  <button mat-button (click)="addToCart()">Annuler</button>
+</div>
